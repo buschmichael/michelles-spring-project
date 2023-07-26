@@ -6,9 +6,10 @@ pipeline {
   stages {
     stage('build') {
       steps {
-          echo 'starting build'
-          pwd
-          ls
+          script {
+            sh 'echo 'starting build''
+            sh 'pwd'
+            sh 'ls'
       }
     }
   }
