@@ -10,6 +10,7 @@ pipeline {
             sh 'echo 'starting build''
             sh 'pwd'
             sh 'ls'
+          }
       }
     }
   }
