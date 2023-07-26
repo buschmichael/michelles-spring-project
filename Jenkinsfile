@@ -10,6 +10,7 @@ pipeline {
             echo 'starting build'
             sh 'pwd'
             sh 'ls'
+            sh './gradlew clean build'
           }
       }
     }
