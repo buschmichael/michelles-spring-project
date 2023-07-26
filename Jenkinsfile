@@ -7,7 +7,7 @@ pipeline {
     stage('build') {
       steps {
           script {
-            sh 'echo 'starting build''
+            echo 'starting build'
             sh 'pwd'
             sh 'ls'
           }
