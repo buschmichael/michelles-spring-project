@@ -27,7 +27,7 @@ pipeline {
 
   post {
     success {
-      echo ${currentBuild.durationString}
+      echo '${currentBuild.durationString}'
     }
   }
 }
