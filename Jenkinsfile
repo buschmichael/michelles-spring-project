@@ -28,7 +28,7 @@ pipeline {
   post {
     success {
       echo "${BUILD_URL}"
-      echo "${BUILD_RESULT}"
+      echo "${BUILD_NUMBER}"
       echo "${JENKINS_URL}"
       echo "${GIT_URL}"
       echo "${WORKSPACE}"
