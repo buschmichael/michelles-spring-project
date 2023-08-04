@@ -33,7 +33,7 @@ pipeline {
       echo "${GIT_URL}"
       echo "${WORKSPACE}"
 
-      sh "curl ${BUILD_URL}api/json"
+      echo currentBuild.duration
     }
   }
 }
