@@ -1,0 +1,11 @@
+# Jenkins Agent pod yaml.
+apiVersion: v1
+kind: Pod
+spec:
+  # schedule on the loadtest node
+  tolerations:
+  - key: loadtest
+    value: server
+    effect: NoSchedule
+  nodeSelector:
+    loadtest: server

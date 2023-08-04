@@ -1,9 +1,18 @@
 pipeline {
   agent {
-    kubernetes {}
+    kubernetes {
+//      yaml '.jenkins/agent-base.yaml'
+    }
   }
   
   stages {
+    stage('init') {
+      steps {
+        script {
+          echo 'welcome, lets do this'
+        }
+      }
+    }
     stage('build') {
       steps {
           script {
@@ -13,6 +22,12 @@ pipeline {
             sh './gradlew clean build'
           }
       }
+    }
+  }
+
+  post {
+    success {
+      echo ${currentBuild.durationString}
     }
   }
 }
