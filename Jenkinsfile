@@ -27,11 +27,11 @@ pipeline {
 
   post {
     success {
-      echo '$BUILD_URL'
-      echo '$BUILD_RESULT'
-      echo '$JENKINS_URL'
-      echo '$GIT_URL'
-      echo '$WORKSPACE'
+      echo '${BUILD_URL}'
+      echo '${BUILD_RESULT}'
+      echo '${JENKINS_URL}'
+      echo '${GIT_URL}'
+      echo '${WORKSPACE}'
     }
   }
 }
