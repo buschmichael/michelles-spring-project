@@ -32,6 +32,8 @@ pipeline {
       echo "${JENKINS_URL}"
       echo "${GIT_URL}"
       echo "${WORKSPACE}"
+
+      sh "curl ${BUILD_URL}/api/json"
     }
   }
 }
