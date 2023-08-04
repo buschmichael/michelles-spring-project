@@ -33,7 +33,7 @@ pipeline {
       echo "${GIT_URL}"
       echo "${WORKSPACE}"
 
-      echo currentBuild.duration
+      echo currentBuild.duration.toString()
     }
   }
 }
