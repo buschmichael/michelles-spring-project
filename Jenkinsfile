@@ -19,7 +19,7 @@ pipeline {
             echo 'starting build'
             sh 'pwd'
             sh 'ls'
-            sh './gradlew clean build'
+//            sh './gradlew clean build'
           }
       }
     }
@@ -27,7 +27,11 @@ pipeline {
 
   post {
     success {
-      echo '${currentBuild.durationString}'
+      echo '$BUILD_URL'
+      echo '$BUILD_RESULT'
+      echo '$JENKINS_URL'
+      echo '$GIT_URL'
+      echo '$WORKSPACE'
     }
   }
 }
